@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,8 +30,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-m9-m5e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-m9-m5e" customClass="RoundedCornerView" customModule="AnotherXIBCell" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="398" height="248"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iPQ-29-ZK6">
                                 <rect key="frame" x="16" y="10" width="48" height="48"/>
@@ -64,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1r-nv-ss3">
-                                <rect key="frame" x="357" y="13.5" width="41" height="41"/>
+                                <rect key="frame" x="341" y="13.5" width="41" height="41"/>
                                 <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U1r-nv-ss3" secondAttribute="height" multiplier="1:1" id="7qc-YR-v1v"/>
@@ -73,8 +74,8 @@
                                 <state key="normal" title="B"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adg-lH-bvY" userLabel="TopLine">
-                                <rect key="frame" x="0.0" y="62" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="62" width="398" height="1"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="icM-sG-l1K"/>
                                 </constraints>
@@ -85,25 +86,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCI-8g-Mz5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCI-8g-Mz5" customClass="RoundedEndView" customModule="AnotherXIBCell" customModuleProvider="target">
                                 <rect key="frame" x="16" y="94" width="120" height="8"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJn-dJ-j8Q">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJn-dJ-j8Q" customClass="RoundedEndView" customModule="AnotherXIBCell" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-1" width="60" height="10"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ny-fj-ese">
-                                                <rect key="frame" x="52" y="1" width="8" height="8"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mini-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="1Ny-fj-ese">
+                                                <rect key="frame" x="51" y="0.5" width="9" height="9"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="8" id="Qbu-Dk-8GQ"/>
-                                                    <constraint firstAttribute="width" constant="8" id="Xjz-qH-7ut"/>
+                                                    <constraint firstAttribute="height" constant="9" id="Qbu-Dk-8GQ"/>
+                                                    <constraint firstAttribute="width" constant="9" id="Xjz-qH-7ut"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.33779942989349365" green="0.6134224534034729" blue="0.94622343778610229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="1Ny-fj-ese" firstAttribute="centerY" secondItem="GJn-dJ-j8Q" secondAttribute="centerY" id="ToU-9W-26T"/>
-                                            <constraint firstAttribute="width" constant="60" id="Y6i-mz-t60"/>
                                             <constraint firstAttribute="trailing" secondItem="1Ny-fj-ese" secondAttribute="trailing" id="bt0-Yi-E7n"/>
                                         </constraints>
                                     </view>
@@ -112,6 +112,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GJn-dJ-j8Q" secondAttribute="bottom" constant="-1" id="6tx-cJ-IVe"/>
                                     <constraint firstAttribute="width" constant="120" id="7DB-hu-ToM"/>
+                                    <constraint firstItem="GJn-dJ-j8Q" firstAttribute="width" secondItem="eCI-8g-Mz5" secondAttribute="width" multiplier="0.5" id="ViU-dS-5An"/>
                                     <constraint firstAttribute="height" constant="8" id="dFR-jD-glV"/>
                                     <constraint firstItem="GJn-dJ-j8Q" firstAttribute="leading" secondItem="eCI-8g-Mz5" secondAttribute="leading" id="mom-ho-Hy9"/>
                                     <constraint firstItem="GJn-dJ-j8Q" firstAttribute="top" secondItem="eCI-8g-Mz5" secondAttribute="top" constant="-1" id="ypz-TH-iOe"/>
@@ -130,30 +131,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Closed Won vs Total Pipeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-IX-H8f">
-                                <rect key="frame" x="269" y="79" width="138" height="10"/>
+                                <rect key="frame" x="253" y="79" width="138" height="10"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Light" family="Metropolis" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erO-yc-j81">
-                                <rect key="frame" x="278" y="94" width="120" height="8"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erO-yc-j81" customClass="RoundedEndView" customModule="AnotherXIBCell" customModuleProvider="target">
+                                <rect key="frame" x="262" y="94" width="120" height="8"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLu-nh-Dfy">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLu-nh-Dfy" customClass="RoundedEndView" customModule="AnotherXIBCell" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-1" width="60" height="10"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7XZ-WG-JbX">
-                                                <rect key="frame" x="52" y="1" width="8" height="8"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mini-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7XZ-WG-JbX">
+                                                <rect key="frame" x="51" y="0.5" width="9" height="9"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="8" id="08Y-pk-hWc"/>
-                                                    <constraint firstAttribute="width" constant="8" id="1Ou-P9-qC9"/>
+                                                    <constraint firstAttribute="height" constant="9" id="08Y-pk-hWc"/>
+                                                    <constraint firstAttribute="width" constant="9" id="1Ou-P9-qC9"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.30458453297615051" green="0.72197335958480835" blue="0.58732777833938599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="7XZ-WG-JbX" firstAttribute="centerY" secondItem="jLu-nh-Dfy" secondAttribute="centerY" id="Y9H-E5-Z9K"/>
-                                            <constraint firstAttribute="width" constant="60" id="f2k-Px-epf"/>
                                             <constraint firstAttribute="trailing" secondItem="7XZ-WG-JbX" secondAttribute="trailing" id="gfh-Lt-AfO"/>
                                         </constraints>
                                     </view>
@@ -162,26 +162,27 @@
                                 <constraints>
                                     <constraint firstItem="jLu-nh-Dfy" firstAttribute="leading" secondItem="erO-yc-j81" secondAttribute="leading" id="8wG-8i-QbP"/>
                                     <constraint firstItem="jLu-nh-Dfy" firstAttribute="top" secondItem="erO-yc-j81" secondAttribute="top" constant="-1" id="AJF-sn-SWF"/>
+                                    <constraint firstItem="jLu-nh-Dfy" firstAttribute="width" secondItem="erO-yc-j81" secondAttribute="width" multiplier="0.5" id="avm-yX-oEv"/>
                                     <constraint firstAttribute="height" constant="8" id="jfO-9A-Vpe"/>
                                     <constraint firstAttribute="width" constant="120" id="qjx-N7-Tl1"/>
                                     <constraint firstAttribute="bottom" secondItem="jLu-nh-Dfy" secondAttribute="bottom" constant="-1" id="uBQ-22-397"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-RC-zjF">
-                                <rect key="frame" x="278" y="107" width="33" height="12"/>
+                                <rect key="frame" x="262" y="107" width="33" height="12"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="12"/>
                                 <color key="textColor" red="0.27997449040412903" green="0.72302573919296265" blue="0.58836251497268677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-tR-BgX">
-                                <rect key="frame" x="365" y="107" width="33" height="12"/>
+                                <rect key="frame" x="349" y="107" width="33" height="12"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="12"/>
                                 <color key="textColor" red="0.27997449040412903" green="0.72302573919296265" blue="0.58836251497268677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMZ-Oo-Q8x" userLabel="BottomLine">
-                                <rect key="frame" x="0.0" y="135" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="135" width="398" height="1"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="mUz-fs-idr"/>
                                 </constraints>
@@ -192,15 +193,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWI-5B-Tht">
-                                <rect key="frame" x="0.0" y="136" width="414" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWI-5B-Tht">
+                                <rect key="frame" x="0.0" y="136" width="398" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Enm-ER-c6W"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" image="right-arrow"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fgO-RC-zjF" firstAttribute="top" secondItem="erO-yc-j81" secondAttribute="bottom" constant="5" id="09I-JR-RTQ"/>
                             <constraint firstItem="zYn-oN-NYh" firstAttribute="trailing" secondItem="eCI-8g-Mz5" secondAttribute="trailing" id="4Vb-7c-Z2s"/>
@@ -224,8 +226,10 @@
                             <constraint firstItem="amP-FY-BTb" firstAttribute="top" secondItem="bpq-St-KdY" secondAttribute="bottom" id="Uuc-lf-xNp"/>
                             <constraint firstItem="U1r-nv-ss3" firstAttribute="centerY" secondItem="iPQ-29-ZK6" secondAttribute="centerY" id="XLx-sz-Sip"/>
                             <constraint firstItem="Bqk-Py-Ogi" firstAttribute="leading" secondItem="zdp-m9-m5e" secondAttribute="leading" constant="21" id="Xlp-6F-Dnh"/>
+                            <constraint firstItem="U1r-nv-ss3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="amP-FY-BTb" secondAttribute="trailing" constant="8" id="YLe-QW-KcT"/>
                             <constraint firstItem="fgO-RC-zjF" firstAttribute="leading" secondItem="erO-yc-j81" secondAttribute="leading" id="YS1-4B-0PB"/>
                             <constraint firstAttribute="trailing" secondItem="adg-lH-bvY" secondAttribute="trailing" id="b5Y-hp-n7Z"/>
+                            <constraint firstItem="U1r-nv-ss3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bpq-St-KdY" secondAttribute="trailing" constant="8" id="cFb-O2-cKF"/>
                             <constraint firstAttribute="trailing" secondItem="hWI-5B-Tht" secondAttribute="trailing" id="f3z-Mc-cEO"/>
                             <constraint firstItem="hWI-5B-Tht" firstAttribute="leading" secondItem="zdp-m9-m5e" secondAttribute="leading" id="gjA-S6-OqA"/>
                             <constraint firstItem="erO-yc-j81" firstAttribute="top" secondItem="gLn-IX-H8f" secondAttribute="bottom" constant="5" id="hMZ-rF-vbN"/>
@@ -244,16 +248,16 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zdp-m9-m5e" firstAttribute="leading" secondItem="mJh-BS-9bI" secondAttribute="leading" id="MqA-vl-gtu"/>
-                    <constraint firstAttribute="bottom" secondItem="zdp-m9-m5e" secondAttribute="bottom" id="RLi-Ej-sLg"/>
-                    <constraint firstAttribute="trailing" secondItem="zdp-m9-m5e" secondAttribute="trailing" id="hAH-gK-tMP"/>
-                    <constraint firstItem="zdp-m9-m5e" firstAttribute="top" secondItem="mJh-BS-9bI" secondAttribute="top" id="oXg-6T-dGK"/>
+                    <constraint firstItem="zdp-m9-m5e" firstAttribute="leading" secondItem="mJh-BS-9bI" secondAttribute="leading" constant="8" id="MqA-vl-gtu"/>
+                    <constraint firstAttribute="bottom" secondItem="zdp-m9-m5e" secondAttribute="bottom" constant="8" id="RLi-Ej-sLg"/>
+                    <constraint firstAttribute="trailing" secondItem="zdp-m9-m5e" secondAttribute="trailing" constant="8" id="hAH-gK-tMP"/>
+                    <constraint firstItem="zdp-m9-m5e" firstAttribute="top" secondItem="mJh-BS-9bI" secondAttribute="top" constant="8" id="oXg-6T-dGK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="achievedLabel" destination="sVL-VS-7Bp" id="AAN-NP-5j7"/>
                 <outlet property="achievedProgress" destination="GJn-dJ-j8Q" id="45Y-bm-gCK"/>
-                <outlet property="achievedWidth" destination="Y6i-mz-t60" id="sGo-YL-hnf"/>
+                <outlet property="achievedWidth" destination="ViU-dS-5An" id="pky-Df-lNi"/>
                 <outlet property="arrowFullImageViewAchieved" destination="1Ny-fj-ese" id="Leb-oI-fAp"/>
                 <outlet property="arrowFullImageViewClosedWon" destination="7XZ-WG-JbX" id="FpE-Sy-IS7"/>
                 <outlet property="cellBackgroundView" destination="zdp-m9-m5e" id="ayr-kU-scd"/>
@@ -270,9 +274,13 @@
                 <outlet property="totalpipelineBar" destination="erO-yc-j81" id="rQf-yt-Lpn"/>
                 <outlet property="totalpipelineLabel" destination="Fma-tR-BgX" id="NL0-Eq-fYu"/>
                 <outlet property="wonProgress" destination="jLu-nh-Dfy" id="yFk-Hy-hXY"/>
-                <outlet property="wonWidth" destination="f2k-Px-epf" id="TDi-QT-pHM"/>
+                <outlet property="wonWidth" destination="avm-yX-oEv" id="X5m-mt-COL"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="181.47321428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="mini-arrow" width="8" height="8"/>
+        <image name="right-arrow" width="24" height="24"/>
+    </resources>
 </document>
